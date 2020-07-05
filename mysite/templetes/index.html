@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+{%load static%}
+<!--
+	Full Motion by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+<head>
+    <title>Youtuber</title>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="{% static 'css/main.css' %}" rel="stylesheet"/>
+</head>
+<body id="top">
+
+<!-- Banner -->
+<!--
+    To use a video as your background, set data-video to the name of your video without
+    its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+    formats to work correctly.
+-->
+<section data-video="{% static 'images/banner'%}" id="banner">
+    <div class="inner">
+        <header>
+            <h1>Evening 5's with Surya</h1>
+            <p>A trending infotech channel makes you to known the information from mysterious historical events to the
+                current trending events happen across the world<br/>
+                Stay Tuned <a href="http://www.youtube.com/channel/{{id}}?sub_confirmation=1">Subscribe</a></p>
+        </header>
+        <a class="more" href="#main">Learn More</a>
+    </div>
+</section>
+
+<!-- Main -->
+<div id="main">
+    <div class="inner">
+
+        <!-- Boxes -->
+        <div class="thumbnails">
+            {% for price in d %}
+            <div class="box">
+                <a class="image fit" href="https://youtu.be/{{price.link}}"><img
+                        alt="" src="https://img.youtube.com/vi/{{price.link}}/maxresdefault.jpg"/></a>
+                <div class="inner">
+                    <h3>{{price.title}}</h3>
+                    <p>{{price.description}}</p>
+                    <a class="button fit" data-poptrox="youtube,800x400"
+                       href="https://youtu.be/{{price.link}}">Watch</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <h2>Description</h2>
+        <p> Evening 5's is the name of my new channel,for every three days I will tell you the top 5 trending things
+            that happens across the world,which includes information about technical,non technical,social affairs,sports
+            etc.......</p>
+
+        <ul class="icons">
+            <li><a class="icon fa-twitter" href="https://twitter.com/kunchamsuryapavan"><span
+                    class="label">Twitter</span></a></li>
+            <li><a class="icon fa-facebook" href="https://www.facebook.com/kuncham.suryapavan"><span class="label">Facebook</span></a>
+            </li>
+            <li><a class="icon fa-instagram" href="https://www.instagram.com/kunchamsuryapavan/"><span class="label">Instagram</span></a>
+            </li>
+            <li><a class="icon fa-envelope" href="#"><span class="label">Email</span></a></li>
+        </ul>
+        <p class="copyright">&copy; Design: <a href="#">GG Solutions</a>. check: <a href="#">Terms and conditions</a>.
+        </p>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+<script src="{% static 'js/jquery.poptrox.min.js' %}"></script>
+<script src="{% static 'js/skel.min.js' %}"></script>
+<script src="{% static 'js/util.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
