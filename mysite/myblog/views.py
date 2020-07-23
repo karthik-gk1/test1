@@ -4,7 +4,7 @@ from .models import out, get_all_video_in_channel
 
 
 def index(request):
-    idd = 'UC9QDA8CiJozdErmYC1PLjGQ'
+    idd = 'channel id'
     t1, li, de = list(get_all_video_in_channel(idd))
     d = []
     for i in range(len(t1)):
